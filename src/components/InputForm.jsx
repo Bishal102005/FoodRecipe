@@ -177,27 +177,27 @@ const styles = `
 const EmailIcon = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
     stroke="#ccc" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-    <polyline points="22,6 12,13 2,6"/>
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+    <polyline points="22,6 12,13 2,6" />
   </svg>
 )
 
 const LockIcon = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
     stroke="#ccc" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-    <path d="M7 11V7a5 5 0 0110 0v4"/>
+    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+    <path d="M7 11V7a5 5 0 0110 0v4" />
   </svg>
 )
 
 const CupIcon = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
     stroke="#ffa8b6" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M18 8h1a4 4 0 010 8h-1"/>
-    <path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/>
-    <line x1="6" y1="1" x2="6" y2="4"/>
-    <line x1="10" y1="1" x2="10" y2="4"/>
-    <line x1="14" y1="1" x2="14" y2="4"/>
+    <path d="M18 8h1a4 4 0 010 8h-1" />
+    <path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z" />
+    <line x1="6" y1="1" x2="6" y2="4" />
+    <line x1="10" y1="1" x2="10" y2="4" />
+    <line x1="14" y1="1" x2="14" y2="4" />
   </svg>
 )
 
@@ -274,9 +274,9 @@ export default function InputForm({ setIsOpen }) {
             <div className="auth-error">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
                 stroke="#c0392b" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="12" cy="12" r="10"/>
-                <line x1="12" y1="8" x2="12" y2="12"/>
-                <line x1="12" y1="16" x2="12.01" y2="16"/>
+                <circle cx="12" cy="12" r="10" />
+                <line x1="12" y1="8" x2="12" y2="12" />
+                <line x1="12" y1="16" x2="12.01" y2="16" />
               </svg>
               {error}
             </div>
