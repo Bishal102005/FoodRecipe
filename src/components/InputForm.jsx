@@ -213,6 +213,9 @@ export default function InputForm({ setIsOpen }) {
     setLoading(true)
     setError("")
     let endpoint = isSignUp ? "signUp" : "login"
+    
+    console.log("Calling API:", (api.defaults.baseURL || "http://localhost:5000") + `/${endpoint}`);
+
     await api.post(`/${endpoint}`, { email, password })
       .then((res) => {
         localStorage.setItem("token", res.data.token)
@@ -220,7 +223,11 @@ export default function InputForm({ setIsOpen }) {
         window.dispatchEvent(new Event("authChange"))
         setIsOpen()
       })
-      .catch(data => setError(data.response?.data?.error || data.response?.data?.message || "Something went wrong"))
+      .catch(err => {
+        console.error("API Error:", err);
+        const exactError = err.response?.data?.error || err.response?.data?.message || err.message || "Unknown Connection Error";
+        setError(exactError)
+      })
       .finally(() => setLoading(false))
   }
 
