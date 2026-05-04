@@ -290,7 +290,7 @@ export default function Navbar() {
           <div className="navbar__logo-icon">
             <CupIcon />
           </div>
-          <h2 className="navbar__logo">Kitchen Stories</h2>
+          <h2 className="navbar__logo">Kitchen Story</h2>
         </div>
 
         <button
