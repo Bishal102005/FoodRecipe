@@ -230,16 +230,25 @@ const navItems = [
   { to: "/favRecipe", label: "Favourites", icon: "❤️", authRequired: true },
 ]
 
+const parseLocalStorageJSON = (key) => {
+  try {
+    const raw = localStorage.getItem(key)
+    return raw ? JSON.parse(raw) : null
+  } catch {
+    return null
+  }
+}
+
 export default function Navbar() {
   const [isOpen,   setIsOpen]   = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const [isLogin,  setIsLogin]  = useState(!localStorage.getItem("token"))
-  const [user,     setUser]     = useState(JSON.parse(localStorage.getItem("user")))
+  const [user,     setUser]     = useState(parseLocalStorageJSON("user"))
 
   useEffect(() => {
     const handleAuthChange = () => {
       setIsLogin(!localStorage.getItem("token"))
-      setUser(JSON.parse(localStorage.getItem("user")))
+      setUser(parseLocalStorageJSON("user"))
     }
     window.addEventListener("authChange", handleAuthChange)
     window.addEventListener("storage",    handleAuthChange)

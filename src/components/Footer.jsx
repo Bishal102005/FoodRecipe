@@ -229,6 +229,12 @@ const styles = {
     WebkitTextFillColor: "transparent",
     fontWeight: 500,
   },
+  websiteLink: {
+    color: "rgba(255,255,255,0.7)",
+    textDecoration: "none",
+    fontWeight: 500,
+    transition: "color 0.2s ease",
+  },
   socials: {
     display: "flex",
     gap: "12px",
@@ -444,6 +450,18 @@ export default function Footer() {
         <div style={{...styles.bottom, ...animationStyle(14)}}>
           <p style={styles.copy}>
             © 2026 <span style={styles.copyAccent}>BS Creation</span> — All rights reserved
+            <span style={{ marginLeft: "1rem" }}>
+              <a
+                href="https://bscreation.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={styles.websiteLink}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "#c8b99a")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.7)")}
+              >
+                bscreation.com
+              </a>
+            </span>
           </p>
           <div style={styles.socials}>
             {Object.entries(socialIcons).map(([name, path], index) => (
